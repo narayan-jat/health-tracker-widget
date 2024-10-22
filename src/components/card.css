@@ -1,0 +1,99 @@
+/* widget.css */
+body {
+    background-color: #f1f1f1; /* Page background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .outer-card {
+    background-color: #e0e0e0; /* A distinct background color for the outer card */
+    padding: 30px;
+    border-radius: 35px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to the outer card */
+    width: 50%; /* Set outer card width to 50% of the screen */
+    margin: 0 auto; /* Center the outer card horizontally */
+    display: flex;
+    flex-direction: column; /* Stack header and card container vertically */
+  }
+  
+  .card-header {
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space between the title and icon */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width of the outer card */
+    margin-bottom: 20px; /* Space below the header */
+  }
+  
+  .edit-icon {
+    cursor: pointer; /* Change cursor to indicate clickable */
+    color: #007bff; /* Change color as needed */
+    transition: color 0.3s; /* Smooth color transition */
+    margin-right: 60px;
+  }
+  
+  .edit-icon:hover {
+    color: #0056b3; /* Change color on hover */
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 20px;
+    justify-items: center;
+    width: 100%; /* Card container takes full width of outer card */
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 20px;
+    width: 80%; /* Adjust width as needed */
+    height: 70%; /* Adjust height as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card h3 {
+    margin-left: -65%;
+    margin-top: -2%;
+    color: #444;
+    font-size: x-large;
+  }
+  
+  .card p {
+    margin: 5px 0;
+  }
+
+  
+  .card:nth-child(1) {
+    background-color: #a6f1a6;
+  }
+  
+  .card:nth-child(2) {
+    background-color: #f36d6d;
+  }
+  
+  .card:nth-child(3) {
+    background-color: #f5d36f;
+  }
+  
+  .card:nth-child(4) {
+    background-color: #a6c1f1;
+  }
+  
+  .card:nth-child(5) {
+    background-color: #a6f1a6;
+  }
+  
+  .card:nth-child(6) {
+    background-color: #f1a66a;
+  }
+  
