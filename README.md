@@ -2,6 +2,7 @@
 
 A sleek, user-friendly health tracker widget built with React and Vite. The widget provides a snapshot of various health-related activities over the past 24 hours, including sleep, sitting, steps, running, exercise, and water intake. It also includes visual data summaries with weekly, monthly, and yearly graphs, simulating realistic data with intelligent randomization.
 
+Live url: https://narayan-jat.github.io/health-tracker-widget/
 ## Features
 
 - **24-Hour Activity Overview:** Displays the most recent data for sleep, sitting, steps, running, exercise, and water intake.
