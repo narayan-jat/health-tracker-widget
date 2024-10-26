@@ -7,7 +7,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Brush,
 } from "recharts";
 
 const aggregateByMonth = (data) => {
@@ -35,7 +34,7 @@ const aggregateByMonth = (data) => {
 
 }
 
-function LineGraph({ title, data, dataKey, average, type, max }) {
+function LineGraph({ title, data, dataKey, average, type, max, fill }) {
     // const monthlyData = aggregateByMonth(data);
   return (
     <div
@@ -53,7 +52,7 @@ function LineGraph({ title, data, dataKey, average, type, max }) {
           {/* Label for Y-Axis */}
           <YAxis label={{ value: type, angle: -90, position: "insideLeft", dy: 10 }} />
           <Tooltip />
-          <Line type="monotone" dataKey={dataKey} stroke="#ffa07a" strokeWidth={2} />
+          <Line type="monotone" dataKey={dataKey} stroke={fill} strokeWidth={3} />
         </LineChart>
       </ResponsiveContainer>
       <div

@@ -1,11 +1,11 @@
 import React from "react";
 import BarGraph from "./BarGraph";
 import LineGraph from "./LineGraph";
-import {useEffect } from "react";
+import { useEffect } from "react";
 import {
   useRandomDataWeekly,
   useRandomDataMonthly,
-  useRandomDataYearly
+  useRandomDataYearly,
 } from "./RandomDataGenerator";
 import GraphWidget from "./GraphWidget";
 
@@ -39,22 +39,31 @@ export default function WaterPlots() {
       generateMonthlyData("water", 3, 7);
     }
     if (Yearly.length == 0) {
-        generateYearlyData("water", 3 * 30, 7 * 30);
-      }
+      generateYearlyData("water", 3 * 30, 7 * 30);
+    }
   }, []);
 
   console.log(Weekly);
   const graphs = [
     <BarGraph
       data={Weekly}
+      fill={"#A4DFE4"}
       average={averageWeekly}
       max={maxWeekly}
       type={"Water taken in ltrs"}
       dataKey={"water"}
     />,
-    <LineGraph data={Monthly}  average={averageMonthly} max={maxMonthly} type={"Water taken in ltrs"} dataKey={"water"}/>,
+    <LineGraph
+      data={Monthly}
+      fill={"#A4DFE4"}
+      average={averageMonthly}
+      max={maxMonthly}
+      type={"Water taken in ltrs"}
+      dataKey={"water"}
+    />,
     <LineGraph
       data={Yearly}
+      fill={"#A4DFE4"}
       average={averageYearly}
       max={maxYearly}
       type={"Water in ltrs"}

@@ -1,11 +1,11 @@
 import React from "react";
 import BarGraph from "./BarGraph";
 import LineGraph from "./LineGraph";
-import {useEffect } from "react";
+import { useEffect } from "react";
 import {
   useRandomDataWeekly,
   useRandomDataMonthly,
-  useRandomDataYearly
+  useRandomDataYearly,
 } from "./RandomDataGenerator";
 import GraphWidget from "./GraphWidget";
 
@@ -39,8 +39,8 @@ export default function ExercisePlots() {
       generateMonthlyData("exercise", 2000, 3000);
     }
     if (Yearly.length == 0) {
-        generateYearlyData("exercise", 2000 * 30, 3000 * 30);
-      }
+      generateYearlyData("exercise", 2000 * 30, 3000 * 30);
+    }
   }, []);
 
   console.log(Weekly);
@@ -51,17 +51,24 @@ export default function ExercisePlots() {
       max={maxWeekly}
       type={"Calorie burnt"}
       dataKey={"exercise"}
+      fill={"#FFB6B9"}
     />,
-    <LineGraph data={Monthly}  average={averageMonthly} max={maxMonthly} type={"Calorie burnt"} dataKey={"exercise"}/>,
+    <LineGraph
+      data={Monthly}
+      average={averageMonthly}
+      max={maxMonthly}
+      type={"Calorie burnt"}
+      dataKey={"exercise"}
+      fill={"#FFB6B9"}
+    />,
     <LineGraph
       data={Yearly}
       average={averageYearly}
       max={maxYearly}
       type={"Calorie burnt"}
       dataKey={"exercise"}
+      fill={"#FFB6B9"}
     />,
   ];
-  return (
-    <GraphWidget components={graphs} title={"Calorie Burnt for this"} />
-  );
+  return <GraphWidget components={graphs} title={"Calorie Burnt for this"} />;
 }

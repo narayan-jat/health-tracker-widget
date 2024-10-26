@@ -1,11 +1,11 @@
 import React from "react";
 import BarGraph from "./BarGraph";
 import LineGraph from "./LineGraph";
-import {useEffect } from "react";
+import { useEffect } from "react";
 import {
   useRandomDataWeekly,
   useRandomDataMonthly,
-  useRandomDataYearly
+  useRandomDataYearly,
 } from "./RandomDataGenerator";
 import GraphWidget from "./GraphWidget";
 
@@ -39,8 +39,8 @@ export default function SleepPlots() {
       generateMonthlyData("hours", 5, 10);
     }
     if (Yearly.length == 0) {
-        generateYearlyData("hours", 155, 300);
-      }
+      generateYearlyData("hours", 155, 300);
+    }
   }, []);
 
   console.log(Weekly);
@@ -51,17 +51,24 @@ export default function SleepPlots() {
       max={maxWeekly}
       type={"Sleep Hours"}
       dataKey={"hours"}
+      fill={"#A9D6E5"}
     />,
-    <LineGraph data={Monthly}  average={averageMonthly} max={maxMonthly} type={"Sleep Hours"} dataKey={"hours"}/>,
+    <LineGraph
+      data={Monthly}
+      average={averageMonthly}
+      max={maxMonthly}
+      type={"Sleep Hours"}
+      dataKey={"hours"}
+      fill={"#A9D6E5"}
+    />,
     <LineGraph
       data={Yearly}
       average={averageYearly}
       max={maxYearly}
       type={"Sleep Hours"}
       dataKey={"hours"}
+      fill={"#A9D6E5"}
     />,
   ];
-  return (
-    <GraphWidget components={graphs} title={"Sleep graph for this"} />
-  );
+  return <GraphWidget components={graphs} title={"Sleep graph for this"} />;
 }

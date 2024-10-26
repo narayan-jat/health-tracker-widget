@@ -1,11 +1,11 @@
 import React from "react";
 import BarGraph from "./BarGraph";
 import LineGraph from "./LineGraph";
-import {useEffect } from "react";
+import { useEffect } from "react";
 import {
   useRandomDataWeekly,
   useRandomDataMonthly,
-  useRandomDataYearly
+  useRandomDataYearly,
 } from "./RandomDataGenerator";
 import GraphWidget from "./GraphWidget";
 
@@ -39,8 +39,8 @@ export default function StepsPlots() {
       generateMonthlyData("steps", 4000, 8000);
     }
     if (Yearly.length == 0) {
-        generateYearlyData("steps", 4000 * 30, 8000 * 30);
-      }
+      generateYearlyData("steps", 4000 * 30, 8000 * 30);
+    }
   }, []);
 
   console.log(Weekly);
@@ -50,18 +50,25 @@ export default function StepsPlots() {
       average={averageWeekly}
       max={maxWeekly}
       type={"Steps taken"}
+      fill={"#C1E1C1"}
       dataKey={"steps"}
     />,
-    <LineGraph data={Monthly}  average={averageMonthly} max={maxMonthly} type={"Steps taken"} dataKey={"steps"}/>,
+    <LineGraph
+      data={Monthly}
+      average={averageMonthly}
+      max={maxMonthly}
+      type={"Steps taken"}
+      dataKey={"steps"}
+      fill={"#C1E1C1"}
+    />,
     <LineGraph
       data={Yearly}
+      fill={"#C1E1C1"}
       average={averageYearly}
       max={maxYearly}
       type={"Steps taken"}
       dataKey={"steps"}
     />,
   ];
-  return (
-    <GraphWidget components={graphs} title={"Step Count for this"} />
-  );
+  return <GraphWidget components={graphs} title={"Step Count for this"} />;
 }

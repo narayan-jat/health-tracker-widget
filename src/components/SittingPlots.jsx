@@ -1,11 +1,11 @@
 import React from "react";
 import BarGraph from "./BarGraph";
 import LineGraph from "./LineGraph";
-import {useEffect } from "react";
+import { useEffect } from "react";
 import {
   useRandomDataWeekly,
   useRandomDataMonthly,
-  useRandomDataYearly
+  useRandomDataYearly,
 } from "./RandomDataGenerator";
 import GraphWidget from "./GraphWidget";
 
@@ -39,8 +39,8 @@ export default function SittingPlots() {
       generateMonthlyData("sitting", 5, 12);
     }
     if (Yearly.length == 0) {
-        generateYearlyData("sitting", 5*30, 12 * 30);
-      }
+      generateYearlyData("sitting", 5 * 30, 12 * 30);
+    }
   }, []);
 
   console.log(Weekly);
@@ -50,18 +50,25 @@ export default function SittingPlots() {
       average={averageWeekly}
       max={maxWeekly}
       type={"Sitting hours"}
+      fill={"#D3E0EA"}
       dataKey={"sitting"}
     />,
-    <LineGraph data={Monthly}  average={averageMonthly} max={maxMonthly} type={"Sitting hours"} dataKey={"sitting"}/>,
+    <LineGraph
+      data={Monthly}
+      average={averageMonthly}
+      max={maxMonthly}
+      type={"Sitting hours"}
+      dataKey={"sitting"}
+      fill={"#D3E0EA"}
+    />,
     <LineGraph
       data={Yearly}
       average={averageYearly}
       max={maxYearly}
       type={"Sitting hours"}
+      fill={"#D3E0EA"}
       dataKey={"sitting"}
     />,
   ];
-  return (
-    <GraphWidget components={graphs} title={"Sitting Plot for this"} />
-  );
+  return <GraphWidget components={graphs} title={"Sitting Plot for this"} />;
 }

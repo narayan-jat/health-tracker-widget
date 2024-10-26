@@ -1,10 +1,15 @@
 import React from "react";
 import "./card.css";
 
-function ActivityCard({ title, value, handleClick, target }) {
+function ActivityCard({ title, value, handleClick, target, done }) {
   return (
     <div className="card" onClick={handleClick}>
-      <div>
+      <div
+        className={`progress ${title.toLowerCase()}`}
+        style={{ height: `${done}%` }}
+      ></div>
+
+      <div className="content">
         <div className="small-card-header">
           <div className="left-item">
             <h4>{title}</h4>

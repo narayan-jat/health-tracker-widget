@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-function BarGraph({ title, data, dataKey, average, type, max }) {
+function BarGraph({ title, data, dataKey, average, type, max, fill }) {
   console.log(data);
   return (
     <div
@@ -27,7 +27,7 @@ function BarGraph({ title, data, dataKey, average, type, max }) {
           {/* Label for Y-Axis */}
           <YAxis label={{ value: type, angle: -90, position: "insideLeft", dy: -5 }} />
           <Tooltip />
-          <Bar dataKey={dataKey} fill="#ffa07a" barSize={40} />
+          <Bar dataKey={dataKey} fill={fill} barSize={40} />
         </BarChart>
       </ResponsiveContainer>
       <div

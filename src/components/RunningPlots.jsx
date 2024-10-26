@@ -1,11 +1,11 @@
 import React from "react";
 import BarGraph from "./BarGraph";
 import LineGraph from "./LineGraph";
-import {useEffect } from "react";
+import { useEffect } from "react";
 import {
   useRandomDataWeekly,
   useRandomDataMonthly,
-  useRandomDataYearly
+  useRandomDataYearly,
 } from "./RandomDataGenerator";
 import GraphWidget from "./GraphWidget";
 
@@ -39,8 +39,8 @@ export default function RunningPlots() {
       generateMonthlyData("running", 1, 5);
     }
     if (Yearly.length == 0) {
-        generateYearlyData("running", 30, 150);
-      }
+      generateYearlyData("running", 30, 150);
+    }
   }, []);
 
   console.log(Weekly);
@@ -51,17 +51,24 @@ export default function RunningPlots() {
       max={maxWeekly}
       type={"Running in kms"}
       dataKey={"running"}
+      fill={"#FFC074"}
     />,
-    <LineGraph data={Monthly}  average={averageMonthly} max={maxMonthly} type={"Running in kms"} dataKey={"running"}/>,
+    <LineGraph
+      data={Monthly}
+      average={averageMonthly}
+      max={maxMonthly}
+      type={"Running in kms"}
+      dataKey={"running"}
+      fill={"#FFC074"}
+    />,
     <LineGraph
       data={Yearly}
       average={averageYearly}
       max={maxYearly}
       type={"Running in kms"}
       dataKey={"running"}
+      fill={"#FFC074"}
     />,
   ];
-  return (
-    <GraphWidget components={graphs} title={"Running for this"} />
-  );
+  return <GraphWidget components={graphs} title={"Running for this"} />;
 }
