@@ -91,5 +91,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Narayan Jat
 - Shravan Bishnoi
-
-Feel free to add additional sections or modify details as per your project's requirements. This README should provide a comprehensive overview and guidance for users and contributors!
