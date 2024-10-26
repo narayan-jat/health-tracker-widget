@@ -51,7 +51,7 @@ export default function SleepPlots() {
       max={maxWeekly}
       type={"Sleep Hours"}
       dataKey={"hours"}
-      fill={"#A9D6E5"}
+      fill={"#597984"}
     />,
     <LineGraph
       data={Monthly}
@@ -59,7 +59,7 @@ export default function SleepPlots() {
       max={maxMonthly}
       type={"Sleep Hours"}
       dataKey={"hours"}
-      fill={"#A9D6E5"}
+      fill={"#597984"}
     />,
     <LineGraph
       data={Yearly}
@@ -67,7 +67,7 @@ export default function SleepPlots() {
       max={maxYearly}
       type={"Sleep Hours"}
       dataKey={"hours"}
-      fill={"#A9D6E5"}
+      fill={"#597984"}
     />,
   ];
   return <GraphWidget components={graphs} title={"Sleep graph for this"} />;

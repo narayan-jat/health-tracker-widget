@@ -1,76 +1,76 @@
-import React from "react";
-import BarGraph from "./BarGraph";
-import LineGraph from "./LineGraph";
-import { useEffect } from "react";
+import React from 'react';
+import BarGraph from './BarGraph';
+import LineGraph from './LineGraph';
+import {useEffect} from 'react';
 import {
   useRandomDataWeekly,
   useRandomDataMonthly,
   useRandomDataYearly,
-} from "./RandomDataGenerator";
-import GraphWidget from "./GraphWidget";
+} from './RandomDataGenerator';
+import GraphWidget from './GraphWidget';
 
-export default function WaterPlots() {
+export default function WaterPlots () {
   const {
     data: Weekly,
     average: averageWeekly,
     max: maxWeekly,
     generateWeeklyData,
-  } = useRandomDataWeekly();
+  } = useRandomDataWeekly ();
 
   const {
     data: Monthly,
     average: averageMonthly,
     max: maxMonthly,
     generateMonthlyData,
-  } = useRandomDataMonthly();
+  } = useRandomDataMonthly ();
 
   const {
     data: Yearly,
     average: averageYearly,
     max: maxYearly,
     generateYearlyData,
-  } = useRandomDataYearly();
+  } = useRandomDataYearly ();
 
-  useEffect(() => {
+  useEffect (() => {
     if (Weekly.length == 0) {
-      generateWeeklyData("water", 3, 7);
+      generateWeeklyData ('water', 3, 7);
     }
     if (Monthly.length == 0) {
-      generateMonthlyData("water", 3, 7);
+      generateMonthlyData ('water', 3, 7);
     }
     if (Yearly.length == 0) {
-      generateYearlyData("water", 3 * 30, 7 * 30);
+      generateYearlyData ('water', 3 * 30, 7 * 30);
     }
   }, []);
 
-  console.log(Weekly);
+  console.log (Weekly);
   const graphs = [
     <BarGraph
       data={Weekly}
-      fill={"#A4DFE4"}
+      fill={'#597984'}
       average={averageWeekly}
       max={maxWeekly}
-      type={"Water taken in ltrs"}
-      dataKey={"water"}
+      type={'Water taken in ltrs'}
+      dataKey={'water'}
     />,
     <LineGraph
       data={Monthly}
-      fill={"#A4DFE4"}
+      fill={'#597984'}
       average={averageMonthly}
       max={maxMonthly}
-      type={"Water taken in ltrs"}
-      dataKey={"water"}
+      type={'Water taken in ltrs'}
+      dataKey={'water'}
     />,
     <LineGraph
       data={Yearly}
-      fill={"#A4DFE4"}
+      fill={'#597984'}
       average={averageYearly}
       max={maxYearly}
-      type={"Water in ltrs"}
-      dataKey={"water"}
+      type={'Water in ltrs'}
+      dataKey={'water'}
     />,
   ];
   return (
-    <GraphWidget components={graphs} title={"Water Drinking graph for this"} />
+    <GraphWidget components={graphs} title={'Water Drinking graph for this'} />
   );
 }

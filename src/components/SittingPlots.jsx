@@ -50,7 +50,7 @@ export default function SittingPlots() {
       average={averageWeekly}
       max={maxWeekly}
       type={"Sitting hours"}
-      fill={"#D3E0EA"}
+      fill={"#597984"}
       dataKey={"sitting"}
     />,
     <LineGraph
@@ -59,14 +59,14 @@ export default function SittingPlots() {
       max={maxMonthly}
       type={"Sitting hours"}
       dataKey={"sitting"}
-      fill={"#D3E0EA"}
+      fill={"#597984"}
     />,
     <LineGraph
       data={Yearly}
       average={averageYearly}
       max={maxYearly}
       type={"Sitting hours"}
-      fill={"#D3E0EA"}
+      fill={"#597984"}
       dataKey={"sitting"}
     />,
   ];
