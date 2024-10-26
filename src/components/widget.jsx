@@ -31,7 +31,7 @@ function Widget() {
               data[0].value % 60
             } mins`}
             done={Math.floor(data[0].value / 10)}
-            handleClick={() => navigate("/sleepplots")}
+            handleClick={() => navigate("/health-tracker-widget/sleepplots")}
           />
           <ActivityCard
             className="cards"
@@ -41,7 +41,7 @@ function Widget() {
             } mins`}
             timer="1hr"
             done={(data[1].value / 720) * 80}
-            handleClick={() => navigate("/sittingplots")}
+            handleClick={() => navigate("/health-tracker-widget/sittingplots")}
           />
           <ActivityCard
             className="cards"
@@ -49,7 +49,7 @@ function Widget() {
             value={data[2].value}
             target="10000"
             done={(data[2].value / 10000) * 80}
-            handleClick={() => navigate("/stepsplots")}
+            handleClick={() => navigate("/health-tracker-widget/stepsplots")}
           />
           <ActivityCard
             title="Water"
@@ -59,7 +59,7 @@ function Widget() {
             timer="30mins"
             target="6 ltrs"
             done={(data[3].value / 6000) * 80}
-            handleClick={() => navigate("/waterplots")}
+            handleClick={() => navigate("/health-tracker-widget/waterplots")}
           />
           <ActivityCard
             className="cards"
@@ -68,7 +68,7 @@ function Widget() {
               data[4].value % 1000
             } m`}
             done={(data[4].value / 5000) * 70}
-            handleClick={() => navigate("/runningplots")}
+            handleClick={() => navigate("/health-tracker-widget/runningplots")}
           />
           <ActivityCard
             className="cards"
@@ -76,7 +76,7 @@ function Widget() {
             value={`${data[5].value} cal`}
             target="2000 cal"
             done={(data[5].value / 2000) * 80}
-            handleClick={() => navigate("/exerciseplots")}
+            handleClick={() => navigate("/health-tracker-widget/exerciseplots")}
           />
         </div>
       </div>

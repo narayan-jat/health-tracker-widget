@@ -36,7 +36,7 @@ function GraphWidget({components, title}) {
   };
 
   const handleChange = () => {
-    navigate("/")
+    navigate("/health-tracker-widget")
   }
   return (
     <div className="app-container">
