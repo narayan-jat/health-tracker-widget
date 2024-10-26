@@ -1,0 +1,74 @@
+/* widget.css */
+body {
+    background-color: #f1f1f1; /* Page background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .card-header {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; 
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width of the outer card */
+    margin-bottom: 20px;
+  }
+  
+  .edit-icon {
+    cursor: pointer; /* Change cursor to indicate clickable */
+    color: #007bff; /* Change color as needed */
+    transition: color 0.3s; /* Smooth color transition */
+    /* margin-right: 60px; */
+  }
+
+  .center-item {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    padding-top: 20px;
+  }
+  
+  .right-item {
+    margin-left: auto; /* Pushes it to the far right */
+  }
+  
+  .edit-icon:hover {
+    color: #0056b3; /* Change color on hover */
+  }
+  
+.app-container {
+  width: 100%;
+  /* background-color: skyblue; */
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.outer-card {
+  padding: 20px;
+  padding-top: 20px;
+  width: 50%;
+  border-radius: 20px;
+  background-color: rgb(216, 216, 216);
+  /* background-color: #F5F5F5; */
+
+}
+
+.card-container {
+  padding:20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ensures space between items */
+  gap: 20px;
+}
+
+.card-container .cards {
+  flex: 1 1 calc(50% - 20px); /* Each card takes up half the width minus the gap */
+  min-width: 500px; /* Minimum width for each card to prevent shrinking too small */
+}
+
+@media (max-width: 600px) {
+  .card-container .cards {
+    min-width: 500px;
+    flex: 1 1 100%; /* On smaller screens, each card will take full width */
+  }
+}

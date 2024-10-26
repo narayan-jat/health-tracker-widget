@@ -1,0 +1,25 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .prev-btn, .next-btn {
+    background-color: #ff7f7f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  .graph-content {
+    width: 100%;
+    max-width: 600px; /* Adjust width as necessary */
+    text-align: center;
+    overflow: hidden;
+  }
+  
